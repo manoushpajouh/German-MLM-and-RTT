@@ -1,0 +1,5 @@
+pytest
+spacy
+transformers
+torch
+sentencepiece
