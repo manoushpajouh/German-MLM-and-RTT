@@ -77,6 +77,8 @@ Install the necessary requirements.
 
 ``` pip install -r requirements.txt ```
 
+``` pip install datasets ```
+
 ``` pip install torch --index-url https://download.pytorch.org/whl/cpu ```
 
 
