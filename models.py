@@ -416,7 +416,7 @@ def main():
     )
 
     # Train the model 
-    # trainer.train() 
+    trainer.train() 
 
     # EVALUATION OF GERMAN MODEL ----------------------------------------------
 
@@ -522,7 +522,7 @@ def main():
     )
 
     # Train the model
-    # trainer.train() 
+    trainer.train() 
 
     # EVALUATION OF ENGLISH MODEL ----------------------------------------------
 
