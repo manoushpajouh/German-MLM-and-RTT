@@ -104,11 +104,9 @@ results since the model does not need to be trained again.
 
 ## Results
 The German MLM had an accuracy rate of 42.68%,
-a top-5 accuracy rate of 66.63% and a top-10 ac-
-curacy rate of 74.16%. These results showcase
+a top-5 accuracy rate of 66.63% and a top-10 accuracy rate of 74.16%. These results showcase
 that the German BERT model can predict masked
-tokens well, and substantially improves as the num-
-ber of accepted predictions increases. The RTT
+tokens well, and substantially improves as the number of accepted predictions increases. The RTT
 model had an accuracy rate of 14.29%, a top-5
 accuracy rate of 28.57%, and a top-10 accuracy
 rate of 42.86%. The German MLM is by far more
@@ -125,18 +123,14 @@ as the single most-probable choice.
 
 ## Biases and Limitations
 
-* Corpus: This model is limited by the nature of translated cor-
-pora as a whole, meaning that there is bias and in-
-consistency between the two versions of the dataset
+* Corpus: This model is limited by the nature of translated corpora as a whole, meaning that there is bias and inconsistency between the two versions of the dataset
 – English and German – that the models have been
 trained on. Furthermore, the dataset is limited to
 movie subtitles, so it will not be neither extremely
 formal nor informal. Just as it may not represent
-natural human language and slang entirely accu-
-rately, it will not represent formal vocabulary, such
+natural human language and slang entirely accurately, it will not represent formal vocabulary, such
 as medical or legal. As with any translated set,
-but especially for subtitles which prioritize captur-
-ing tone and emotion, more or less context may
+but especially for subtitles which prioritize capturing tone and emotion, more or less context may
 be necessary within each translation. Because of
 this, translations will not be direct, word-for-word
 translations.
@@ -157,15 +151,13 @@ for this case study.
 
 * Translation Models
 In the RTT model, by translating sentences with
-the masked token and then with the filled-in pre-
-diction, there is a chance that the translation model
+the masked token and then with the filled-in prediction, there is a chance that the translation model
 is changing the sentence rather than reverting it to
 the exact German sentence. This is especially a
 concern since BERT models treat prefix and suffix
 tokens as individual word tokens. Furthermore, I
 filter out sentences that, once the mask has been
-applied and the sentence is translated back to Ger-
-man, no longer have the mask in the sentence due
+applied and the sentence is translated back to German, no longer have the mask in the sentence due
 to translation errors. This could be because the
 sentence no longer needs the mask to make sense
 (i.e. "Ich habe den Film gesehen" → "Ich habe den
@@ -187,8 +179,7 @@ proportional rate.
 
 ## Future Work
 Future work may improve RTT performance by normalizing
-data to account for morphological issues or mea-
-suring word predictions using cosine similarities to
+data to account for morphological issues or measuring word predictions using cosine similarities to
 evaluate the monolingual and RTT model predic-
 tions alongside each other. Additionally, batching
 translation steps and exploring alternative place-
