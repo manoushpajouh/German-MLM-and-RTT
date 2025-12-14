@@ -185,7 +185,17 @@ more filtering done). This may be a contributing
 factor as to why the accuracy rates increase at a
 proportional rate.
 
-# Links and Resources
+## Future Work
+Future work may improve RTT performance by normalizing
+data to account for morphological issues or mea-
+suring word predictions using cosine similarities to
+evaluate the monolingual and RTT model predic-
+tions alongside each other. Additionally, batching
+translation steps and exploring alternative place-
+holder strategies may further stabilize RTT evalua-
+tion.
+
+## Links and Resources
 
 OPUS Open Subtitles German-English: https://opus.nlpl.eu/OpenSubtitles/en&de/v2024/OpenSubtitles
 
